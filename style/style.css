@@ -1,0 +1,254 @@
+
+ 
+:root {
+    /* Couleurs principales & Thème */
+    --primary-color: #007bff;      /* Bleu principal (Boutons, Liens au survol, bordures) */
+    --primary-hover: #0056b3;      /* Bleu foncé (Effet survol bouton/lien) */
+    --dark-header: #1a252f;        /* Fond En-tête, Pied de page, Titre tableau */
+    --dark-nav: #2c3e50;           /* Fond des boutons du menu de navigation */
+    --dark-sub-header: #34495e;    /* Sous-titres du tableau des horaires */
+ 
+    /* Couleurs de fond */
+    --bg-body: #f4f6f9;            /* Fond général de la page */
+    --bg-card: #ffffff;            /* Fond des cartes / conteneurs */
+    --bg-search: #e9ecef;          /* Fond de la barre de recherche */
+    --bg-placeholder: #e2e8f0;     /* Fond des emplacements d'images */
+ 
+    /* Couleurs de texte */
+    --text-primary: #333333;       /* Couleur de texte principal */
+    --text-muted: #4a5568;         /* Texte de définition / secondaire */
+    --text-light: #ffffff;         /* Texte clair sur fond sombre */
+    --text-placeholder: #64748b;   /* Texte des images d'illustration */
+    --text-price: #d9534f;         /* Rouge pour l'affichage des prix */
+ 
+    /* Couleurs de bordures */
+    --border-color: #dddddd;       /* Bordures des cartes */
+    --border-table: #cccccc;       /* Bordures des tableaux */
+    --border-placeholder: #cbd5e1; /* Bordures des espaces images */
+}
+ 
+
+ 
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-body);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+ 
+a {
+    color: var(--primary-color);
+}
+ 
+a:hover
+{
+    color: var(--primary-hover);
+}
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--dark-header);
+    color: var(--text-light);
+}
+ 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-light);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+ 
+.brand:hover,
+.brand:focus {
+    color: var(--text-light);
+}
+ 
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+ 
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ 
+.main-nav a {
+    display: block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    background-color: var(--dark-nav);
+    color: var(--text-light);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+ 
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: var(--primary-hover);
+    color: var(--text-light);
+}
+ 
+.main-nav a.active {
+    background-color: var(--primary-color);
+}
+ 
+.main-nav a.active:hover,
+.main-nav a.active:focus {
+    background-color: var(--primary-hover);
+}
+ 
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    align-content: start;
+}
+.column-main {
+    display: grid;
+    gap: 1rem;
+}
+.card {
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-card);
+}
+ 
+.card h2 {
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 1.15rem;
+    color: var(--text-primary);
+}
+ 
+ 
+.intro {
+    color: var(--text-muted);
+}
+ 
+.categories > li {
+  
+    font-weight: bold;
+}
+ 
+.categories ul,
+.categories ol {
+
+    font-weight: normal;
+}
+ 
+.categories ul ul {
+    list-style-type: square;
+}
+ 
+.categories .link-pc {
+    color: var(--primary-hover);
+    font-weight: bold;
+    text-decoration: none;
+}
+ 
+.categories .link-pc:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.9rem;
+}
+ 
+.form-group label {
+    font-weight: bold;
+}
+ 
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.5rem 0.6rem;
+    border: 1px solid var(--border-table);
+    border-radius: 4px;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+ 
+input:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 0;
+    border-color: var(--primary-color);
+}
+ 
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+ 
+.btn:hover,
+.btn:focus {
+    background-color: var(--primary-hover);
+}
+ 
+.card .form-note {
+    margin-top: 1.25rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+ 
+/* ---------- Pied de page ---------- */
+.site-footer {
+    padding: 1rem;
+    background-color: var(--dark-header);
+    color: var(--text-light);
+    font-size: 0.8rem;
+    text-align: center;
+}
+ 
+@media (min-width: 768px) {
+    .site-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 2rem;
+    }
+ 
+
+}
