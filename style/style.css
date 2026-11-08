@@ -1,5 +1,4 @@
 
- 
 :root {
     /* Couleurs principales & Thème */
     --primary-color: #007bff;      /* Bleu principal (Boutons, Liens au survol, bordures) */
@@ -49,18 +48,17 @@ a:hover
 {
     color: var(--primary-hover);
 }
-
-.site-header {
+.entete {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 0.75rem;
-    padding: 0.75rem 1rem;
     background-color: var(--dark-header);
     color: var(--text-light);
 }
  
-.brand {
+.marque {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -70,8 +68,7 @@ a:hover
     text-decoration: none;
 }
  
-.brand:hover,
-.brand:focus {
+.marque:hover {
     color: var(--text-light);
 }
  
@@ -79,6 +76,7 @@ a:hover
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom:0.25rem;
     width: 2.25rem;
     height: 2.25rem;
     border-radius: 6px;
@@ -88,7 +86,7 @@ a:hover
     font-weight: bold;
 }
  
-.main-nav ul {
+.menu ul {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -97,8 +95,7 @@ a:hover
     list-style: none;
 }
  
-.main-nav a {
-    display: block;
+.menu a {
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
     background-color: var(--dark-nav);
@@ -108,18 +105,16 @@ a:hover
     text-decoration: none;
 }
  
-.main-nav a:hover,
-.main-nav a:focus {
+.menu a:hover {
     background-color: var(--primary-hover);
     color: var(--text-light);
 }
  
-.main-nav a.active {
+.menu a.actif {
     background-color: var(--primary-color);
 }
  
-.main-nav a.active:hover,
-.main-nav a.active:focus {
+.menu a.actif:hover{
     background-color: var(--primary-hover);
 }
  
@@ -133,7 +128,7 @@ a:hover
     padding: 1rem;
     align-content: start;
 }
-.column-main {
+.colonne-principale {
     display: grid;
     gap: 1rem;
 }
@@ -151,10 +146,6 @@ a:hover
 }
  
  
-.intro {
-    color: var(--text-muted);
-}
- 
 .categories > li {
   
     font-weight: bold;
@@ -170,24 +161,24 @@ a:hover
     list-style-type: square;
 }
  
-.categories .link-pc {
+.categories .lien-pc {
     color: var(--primary-hover);
     font-weight: bold;
     text-decoration: none;
 }
  
-.categories .link-pc:hover {
+.categories .lien-pc:hover {
     color: var(--primary-color);
     text-decoration: underline;
 }
-.form-group {
+.groupe-formulaire {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
     margin-bottom: 0.9rem;
 }
  
-.form-group label {
+.groupe-formulaire label {
     font-weight: bold;
 }
  
@@ -199,48 +190,118 @@ input[type="password"] {
     border-radius: 4px;
     background-color: var(--bg-card);
     color: var(--text-primary);
-    font-family: inherit;
     font-size: 0.9rem;
 }
  
-.btn {
+ 
+.bouton {
     padding: 0.5rem 1.1rem;
     border: none;
     border-radius: 4px;
     background-color: var(--primary-color);
     color: var(--text-light);
-    font-family: inherit;
-    font-size: 0.85rem;
+    font-size: 0.80rem;
     font-weight: bold;
 }
  
-.btn:hover,
-.btn:focus {
+.bouton:hover {
     background-color: var(--primary-hover);
 }
  
-.card .form-note {
+.card .note-formulaire {
     margin-top: 1.25rem;
     padding-top: 0.75rem;
     border-top: 1px solid var(--border-color);
 }
  
-/* ---------- Pied de page ---------- */
-.site-footer {
+.pied-de-page {
     padding: 1rem;
     background-color: var(--dark-header);
     color: var(--text-light);
     font-size: 0.8rem;
     text-align: center;
 }
+
+.container.catalogue {
+    grid-template-columns: 1fr;
+}
+
+.barre-filtre {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    border-radius: 4px;
+    background-color: var(--bg-search);
+}
+
+.champ-mot-cle {
+    width:300px;
+}
+
+.champ-tri {
+    width:230px;
+}
+
+.liste-tri {
+    padding: 0.5rem 0.6rem;
+    border: 1px solid var(--border-table);
+    border-radius: 4px;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.bouton-filtre {
+    margin-bottom: 0.9rem;
+    margin-right:0.5rem;
+}
+
+
+.tableau-pc {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+}
+
+.tableau-pc th {
+    padding: 0.6rem;
+    border: 1px solid var(--border-table);
+    background-color: var(--dark-nav);
+    color: var(--text-light);
+    font-size: 0.8rem;
+
+}
+
+.tableau-pc td {
+    padding: 0.6rem;
+    border: 1px solid var(--border-table);
+    font-size: 0.8rem;
+}
+
+.reference {
+    font-weight: bold;
+}
+.photo-pc {
+    width: 90px;
+    border-radius: 4px;
+}
+
+
+.prix {
+    color: var(--text-price);
+    font-weight: bold;
+}
  
 @media (min-width: 768px) {
-    .site-header {
+    .entete {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 0.75rem 2rem;
     }
- 
-
+    .container {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
 }

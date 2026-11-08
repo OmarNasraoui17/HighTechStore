@@ -8,14 +8,14 @@
 </head>
 <body>
 
-    <header class="site-header">
-        <a class="brand" href="index.html">
+    <header class="entete">
+        <a class="marque" href="index.html">
             <span class="logo">HTS</span>
             <span>HighTechStore</span>
         </a>
-        <nav class="main-nav" aria-label="Navigation principale">
+        <nav class="menu" aria-label="Navigation principale">
             <ul>
-                <li><a class="active" href="index.html">Accueil</a></li>
+                <li><a class="actif" href="index.html">Accueil</a></li>
                 <li><a href="pages/pc.html">PC</a></li>
                 <li><a href="pages/inscription.html">Inscription</a></li>
                 <li><a href="pages/infos.html">Infos</a></li>
@@ -24,9 +24,7 @@
     </header>
 
     <main class="container">
-
-        <div class="column-main">
-
+        <div class="colonne-principale">
         <section class="card">
             <h2>Présentation de l'entreprise</h2>
             <p>
@@ -46,11 +44,10 @@
         <section class="card">
             <h2>Nos Catégories de Produits</h2>
             <p class="intro">Parcourez notre catalogue structuré par catégories de matériel informatique :</p>
-
             <ul class="categories">
                 <li>Ordinateurs et Portables
                     <ul>
-                        <li><a class="link-pc" href="pages/pc.html">PC de bureau et PC portables (Accéder à la page PC)</a></li>
+                        <li><a class="lien-pc" href="pages/pc.html">PC de bureau et PC portables (Accéder à la page PC)</a></li>
                         <li>PC Gamer & Stations de travail</li>
                         <li>Accessoires PC
                             <ol>
@@ -81,30 +78,26 @@
                 </li>
             </ul>
         </section>
-
         </div>
-
         <aside class="card">
             <h2>Espace Connexion</h2>
             <form action="#" method="post">
-                <div class="form-group">
+                <div class="groupe-formulaire">
                     <label for="login">Identifiant (Login) :</label>
                     <input type="text" id="login" name="login" placeholder="Votre identifiant" required>
                 </div>
-                <div class="form-group">
+                <div class="groupe-formulaire">
                     <label for="password">Mot de passe :</label>
                     <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>
                 </div>
-                <button type="submit" class="btn">Se connecter</button>
+                <button type="submit" class="bouton">Se connecter</button>
             </form>
-            <p class="form-note">
+            <p class="note-formulaire">
                 Pas encore de compte ? <a href="pages/inscription.html">Inscrivez-vous ici.</a>
             </p>
         </aside>
-
     </main>
-
-    <footer class="site-footer">
+    <footer class="pied-de-page">
         <p>&copy; 2026 HighTechStore - Tous droits réservés | Auteur : Nasraoui Omar</p>
     </footer>
 
