@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighTechStore - Inscription</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+    <header class="entete">
+        <a class="marque" href="../index.html">
+            <span class="logo">HTS</span>
+            <span>HighTechStore</span>
+        </a>
+        <nav class="menu" aria-label="Navigation principale">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="pc.html">PC</a></li>
+                <li><a class="actif" href="inscription.html">Inscription</a></li>
+                <li><a href="infos.html">Infos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container inscription">
+
+        <section class="card">
+            <h2>Formulaire d'Inscription</h2>
+
+            <form class="formulaire-inscription" action="#" method="post">
+
+                <div class="groupe-formulaire">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="date-naissance">Date de naissance :</label>
+                    <input type="date" id="date-naissance" name="date-naissance" required>
+                </div>
+
+                <div class="groupe-formulaire">
+                    <span class="titre-choix" id="titre-sexe">Sexe :</span>
+                    <div class="choix-sexe" role="radiogroup" aria-labelledby="titre-sexe">
+                        <label class="option-radio">
+                            <input type="radio" name="sexe" value="masculin" checked> Masculin
+                        </label>
+                        <label class="option-radio">
+                            <input type="radio" name="sexe" value="feminin"> Féminin
+                        </label>
+                    </div>
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="adresse">Adresse :</label>
+                    <input type="text" id="adresse" name="adresse">
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="code-postal">Code postal :</label>
+                    <input type="text" id="code-postal" name="code-postal" pattern="[0-9]{4}" maxlength="4">
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="ville">Ville :</label>
+                    <input type="text" id="ville" name="ville">
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="gouvernorat">Gouvernorat :</label>
+                    <select id="gouvernorat" name="gouvernorat">
+                        <option value="">-- Choisir un gouvernorat --</option>
+                        <option value="ariana">Ariana</option>
+                        <option value="beja">Béja</option>
+                        <option value="ben-arous">Ben Arous</option>
+                        <option value="bizerte">Bizerte</option>
+                        <option value="gabes">Gabès</option>
+                        <option value="gafsa">Gafsa</option>
+                        <option value="jendouba">Jendouba</option>
+                        <option value="kairouan">Kairouan</option>
+                        <option value="kasserine">Kasserine</option>
+                        <option value="kebili">Kébili</option>
+                        <option value="le-kef">Le Kef</option>
+                        <option value="mahdia">Mahdia</option>
+                        <option value="la-manouba">La Manouba</option>
+                        <option value="medenine">Médenine</option>
+                        <option value="monastir">Monastir</option>
+                        <option value="nabeul">Nabeul</option>
+                        <option value="sfax">Sfax</option>
+                        <option value="sidi-bouzid">Sidi Bouzid</option>
+                        <option value="siliana">Siliana</option>
+                        <option value="sousse">Sousse</option>
+                        <option value="tataouine">Tataouine</option>
+                        <option value="tozeur">Tozeur</option>
+                        <option value="tunis">Tunis</option>
+                        <option value="zaghouan">Zaghouan</option>
+                    </select>
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="fonction">Fonction :</label>
+                    <input type="text" id="fonction" name="fonction">
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="email">Adresse E-mail :</label>
+                    <input type="email" id="email" name="email" placeholder="nom@exemple.com" required>
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="telephone">Numéro de téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone">
+                </div>
+
+                <div class="groupe-formulaire champ-large">
+                    <label for="remarques">Remarques :</label>
+                    <textarea id="remarques" name="remarques" rows="4" placeholder="Vos remarques ou précisions..."></textarea>
+                </div>
+
+                <button type="submit" class="bouton">Valider l'inscription</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="pied-de-page">
+        <p>&copy; 2026 HighTechStore - Tous droits réservés | Auteur : Nasraoui Omar</p>
+    </footer>
+
+</body>
+</html>
