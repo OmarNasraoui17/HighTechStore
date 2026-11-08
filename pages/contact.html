@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighTechStore - Contact</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+    <header class="entete">
+        <a class="marque" href="../index.html">
+            <span class="logo">HTS</span>
+            <span>HighTechStore</span>
+        </a>
+        <nav class="menu">
+                <a href="../index.html">Accueil</a>
+                <a href="pc.html">PC</a>
+                <a href="inscription.html">Inscription</a>
+                <a href="infos.html">Infos</a>
+                <a class="actif" href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Contactez-nous</h2>
+            <p>Une question sur un produit ou une commande ? Écrivez-nous, nous vous répondrons rapidement.</p>
+
+            <form class="formulaire-contact" action="#" method="post">
+                <div class="groupe-formulaire">
+                    <label for="nom">Nom complet :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div class="groupe-formulaire">
+                    <label for="email">Adresse E-mail :</label>
+                    <input type="email" id="email" name="email" placeholder="nom@exemple.com" required>
+                </div>
+                <div class="groupe-formulaire">
+                    <label for="sujet">Sujet :</label>
+                    <select id="sujet" name="sujet">
+                        <option value="produit">Question sur un produit</option>
+                        <option value="commande">Suivi de commande</option>
+                        <option value="sav">Service après-vente</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div class="groupe-formulaire">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
+                </div>
+                <button type="submit" class="bouton">Envoyer le message</button>
+            </form>
+        </section>
+
+        <aside class="card">
+            <h2>Nos Coordonnées</h2>
+            <p class="infos-contact">
+                <strong>Adresse :</strong> Rue des Technologies, Charguia 2, 2035 Tunis, Tunisie<br>
+                <strong>Téléphone :</strong> +216 71 000 000<br>
+                <strong>E-mail :</strong> contact@hightechstore.tn
+            </p>
+            <p class="note-formulaire">
+                Retrouvez nos jours et heures d'ouverture sur la page <a href="infos.html">Infos</a>.
+            </p>
+        </aside>
+
+    </main>
+
+    <footer class="pied-de-page">
+        <p>&copy; 2026 HighTechStore - Tous droits réservés | Auteur : Nasraoui Omar</p>
+    </footer>
+
+</body>
+</html>
